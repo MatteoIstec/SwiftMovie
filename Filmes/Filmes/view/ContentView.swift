@@ -26,7 +26,7 @@ struct ContentView: View {
                         HStack {
                             Text("Home Page")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .fontWeight(.heavy)
                         }
                         .padding(.horizontal)
@@ -59,14 +59,14 @@ struct ContentView: View {
                                 
                                 VStack(alignment: .leading) {
                                     Text(item.title)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.black)
                                         .font(.headline)
                                     HStack {
                                         Image(systemName:"hand.thumbsup.fill") //thumbs up %
                                         Text(String(format: "%.1f",item.vote_average))
                                         Spacer()
                                     }
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.black)
                                     .fontWeight(.heavy)
                                 }
                                 Spacer()
@@ -79,7 +79,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .background(Color(red:0/255,green:0/255,blue:0/255).ignoresSafeArea())
+            .background(Color(red:255/255,green:255/255,blue:255/240).ignoresSafeArea())
         }
         .searchable(text: $searchText)   //if a movie is typed load the page
         .onChange(of: searchText) { newValue in
@@ -92,6 +92,7 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+            
             
         }
     }
